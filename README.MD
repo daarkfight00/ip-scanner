@@ -23,7 +23,7 @@ git clone https://github.com/daarkfight00/ip-scanner.git
 Navigate to the project directory
 
 ```bash
-cd ip-tracer
+cd ip-scanner
 ```
 
 Give privileges to the installer
