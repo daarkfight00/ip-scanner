@@ -60,7 +60,7 @@ If you have any feedback, please reach out to me at https://discord.gg/cZxBaJ32y
 
 ## Support
 
-For support, open an Issues, open a new issue or check my discord server: https://discord.gg/cZxBaJ32yk
+For support, open an Issues or check my discord server: https://discord.gg/cZxBaJ32yk
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
