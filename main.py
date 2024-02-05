@@ -1,3 +1,4 @@
+from platform import system
 import socket
 import requests
 import webbrowser
@@ -7,6 +8,7 @@ import colorama
 from colorama import Fore
 import sys
 import platform
+from port import scan_port
 
 colorama.init()
 
@@ -59,7 +61,7 @@ def display_info(data):
     print(f"ISP: {data['isp']}")
     print(f"Latitude: {data['lat']}")
     print(f"Longitude: {data['lon']}{Fore.RESET}")
-    print(f"\n \nATTENTION!! The position is not very precise, ranging from (10 m to 100km)")
+    print(f"\n \nATTENTION!! The position is not very precise, ranging from (10 m to 1km)")
 
 def scan_ip(ip):
     try:
@@ -90,6 +92,7 @@ if __name__ == "__main__":
         print("1. Scan own IP")
         print("2. Scan specific IP")
         print("3. Open GitHub project")
+        print("4. Scan port of an ip address")
 
         choice = input("Enter your choice: ")
 
@@ -106,22 +109,13 @@ if __name__ == "__main__":
         elif choice == "3":
             print("Opening GitHub project...")
             webbrowser.open("https://github.com/daarkfight00", new=2)
+        elif choice == '4':
+            target_ip = input("Enter the target IP: ")
+            os.system(clear_command)
+            print(f"Scanning ports for {target_ip}...")
+            for port_number in range(1, 1025):
+                scan_port(target_ip, port_number)
         else:
             print("Invalid choice.")
 
         input("\rPress any key to continue...   ")
-        another_scan = input("Scan another IP? [Y] [n] : ")
-        if another_scan.lower() not in ["y", "", "Y"]:
-            messaggio = f"{Fore.RED}\nDeveloper https://github.com/daarkfight00{Fore.RESET}\n"
-            for char in messaggio:
-                sys.stdout.write(char)
-                sys.stdout.flush()
-                time.sleep(0.05)
-            messaggio = f"{Fore.GREEN}Thanks for your use ;) {Fore.RESET}"
-            for char in messaggio:
-                sys.stdout.write(char)
-                sys.stdout.flush()
-                time.sleep(0.05)
-            time.sleep(3)
-            os.system(clear_command)
-            break
