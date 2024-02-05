@@ -3,3 +3,6 @@ socket
 webbrowser
 colorama
 sys
+time
+platform
+os
