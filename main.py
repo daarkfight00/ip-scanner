@@ -119,3 +119,19 @@ if __name__ == "__main__":
             print("Invalid choice.")
 
         input("\rPress any key to continue...   ")
+
+        another_scan = input("Scan another IP? [Y] [n] : ")
+        if another_scan.lower() not in ["y", "", "Y"]:
+            messaggio = f"{Fore.RED}\nDeveloper https://github.com/daarkfight00{Fore.RESET}\n"
+            for char in messaggio:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(0.05)
+            messaggio = f"{Fore.GREEN}Thanks for your use ;) {Fore.RESET}"
+            for char in messaggio:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(0.05)
+            time.sleep(3)
+            os.system(clear_command)
+            break
