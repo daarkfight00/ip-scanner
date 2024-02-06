@@ -61,7 +61,7 @@ def display_info(data):
     print(f"ISP: {data['isp']}")
     print(f"Latitude: {data['lat']}")
     print(f"Longitude: {data['lon']}{Fore.RESET}")
-    print(f"\n \nATTENTION!! The position is not very precise, ranging from (10 m to 1km)")
+    print(f"\n \nATTENTION!! The position is not very precise, ranging from (10 m to 100km)")
 
 def scan_ip(ip):
     try:
